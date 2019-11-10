@@ -31,5 +31,9 @@ After configuring Pusher, recompile the assets
 npm run dev
 ```
 
+# Routes
+The demo app has two main routes `/home` and `/send/{userId}`.
+
+Create an account and leave one browser tab open on `/home`. The user you're currently logged in as, probably has the ID of 1. If you open a new tab and visit `/send/1` you'll receive a notification on the `/home` tab.
 
 
