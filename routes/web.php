@@ -11,6 +11,20 @@
 |
 */
 
+use App\Booking;
+use App\Events\ConfirmBookingEvent;
+use App\User;
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/send/{user}', function (User $user) {
+    $booking = Booking::create(['user_id' => $user->id]);
+
+    event(new ConfirmBookingEvent($booking));
 });
