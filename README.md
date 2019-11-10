@@ -23,4 +23,13 @@ PUSHER_APP_CLUSTER=eu
 ```
 
 
+# Recompile assets
+
+After configuring Pusher, recompile the assets
+
+```
+npm run dev
+```
+
+
 
